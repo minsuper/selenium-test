@@ -8,6 +8,7 @@ def test_eight_components():
     driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
     title = driver.title
+    print(title)
     assert title == "Web form"
 
     driver.implicitly_wait(0.5)
@@ -20,6 +21,7 @@ def test_eight_components():
 
     message = driver.find_element(by=By.ID, value="message")
     value = message.text
+    print(value)
     assert value == "Received!"
 
     driver.quit()
